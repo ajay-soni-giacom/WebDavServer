@@ -157,6 +157,8 @@ namespace FubarDev.WebDavServer.Handlers.Impl
                         _logger.LogInformation("Writing data with content length {0}", contentLength.Value);
                         await Copy(data, fileStream, contentLength.Value, cancellationToken).ConfigureAwait(false);
                     }
+
+                    await document.CleanUp().ConfigureAwait(false);
                 }
 
                 var docPropertyStore = document.FileSystem.PropertyStore;

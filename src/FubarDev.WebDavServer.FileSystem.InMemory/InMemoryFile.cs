@@ -177,6 +177,11 @@ namespace FubarDev.WebDavServer.FileSystem.InMemory
             return doc;
         }
 
+        public Task CleanUp()
+        {
+            return Task.FromResult(0);
+        }
+
         private class MyMemoryStream : MemoryStream
         {
             private readonly InMemoryFile _file;

@@ -134,5 +134,10 @@ namespace FubarDev.WebDavServer.FileSystem.DotNet
 
             return doc;
         }
+
+        public Task CleanUp()
+        {
+            return Task.FromResult(0);
+        }
     }
 }

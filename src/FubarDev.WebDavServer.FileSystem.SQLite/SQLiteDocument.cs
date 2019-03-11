@@ -142,6 +142,11 @@ namespace FubarDev.WebDavServer.FileSystem.SQLite
             return newDoc;
         }
 
+        public Task CleanUp()
+        {
+            return Task.FromResult(0);
+        }
+
         // ReSharper disable once ClassNeverInstantiated.Local
         private class RowIdTemp
         {

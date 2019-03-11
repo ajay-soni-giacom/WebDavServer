@@ -59,5 +59,9 @@ namespace FubarDev.WebDavServer.FileSystem
         [NotNull]
         [ItemNotNull]
         Task<IDocument> MoveToAsync([NotNull] ICollection collection, [NotNull] string name, CancellationToken cancellationToken);
+
+        [NotNull]
+        [ItemNotNull]
+        Task CleanUp();
     }
 }
